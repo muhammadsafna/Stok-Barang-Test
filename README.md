@@ -1,40 +1,67 @@
-Inventory Stok App
-📌 Tentang Aplikasi
-Inventory Management App adalah aplikasi berbasis Android yang dirancang untuk membantu pengguna dalam mengelola stok barang secara efisien. Aplikasi ini menggunakan arsitektur MVVM dengan integrasi API dan database lokal Room untuk memastikan data selalu up-to-date dan dapat diakses secara offline.
+# Inventory Management App
 
-✨ Fitur Utama
-✅ Autentikasi Pengguna – Login menggunakan API dengan sistem token yang aman.
-✅ Manajemen Data Item – Tambah, edit, hapus, dan cari item dengan mudah.
-✅ Penyimpanan Lokal (Offline Support) – Data tersimpan di database lokal menggunakan Room.
-✅ Integrasi API – Data dapat diperbarui secara real-time melalui koneksi internet.
-✅ Pencarian dan Filter – Cari item berdasarkan nama, stok, atau unit.
-✅ Desain Responsif & User-Friendly – Tampilan bersih dan mudah digunakan.
+Inventory Management App adalah aplikasi berbasis Android yang membantu pengguna dalam mengelola stok barang secara efisien. Aplikasi ini mengintegrasikan API untuk autentikasi dan pengambilan data, serta menggunakan database lokal Room untuk menyimpan data secara offline. Dengan arsitektur MVVM, aplikasi ini memberikan pengalaman pengguna yang responsif dan terstruktur.
 
-🔧 Teknologi yang Digunakan
-Kotlin – Bahasa utama pengembangan aplikasi.
+## Fitur Utama
 
-MVVM Architecture – Memisahkan logika bisnis dan UI agar lebih terstruktur.
+- **Autentikasi Pengguna**  
+  Pengguna dapat login menggunakan email dan password. Sistem autentikasi menggunakan API yang mengembalikan token yang aman untuk akses selanjutnya.
 
-Retrofit – Menghubungkan aplikasi dengan API.
+- **Manajemen Data Item**  
+  Aplikasi mendukung operasi CRUD (Create, Read, Update, Delete) untuk data item. Pengguna dapat menambahkan, mengedit, dan menghapus item dengan mudah.
 
-Room Database – Menyimpan data secara lokal untuk akses cepat.
+- **Penyimpanan Lokal (Offline Support)**  
+  Data item disimpan secara lokal menggunakan Room, sehingga data dapat diakses meskipun dalam keadaan offline. Data lokal akan diperbarui saat koneksi internet tersedia melalui proses sinkronisasi.
 
-LiveData & ViewModel – Memastikan UI selalu sinkron dengan data terbaru.
+- **Integrasi API**  
+  Aplikasi terhubung ke server melalui Retrofit. Endpoint API yang utama adalah untuk login dan mengambil data item. Token yang didapat saat login akan dikirim sebagai header otorisasi pada setiap permintaan data.
 
-Coroutines – Mengelola operasi asinkron secara efisien.
+- **Pencarian dan Filter**  
+  Pengguna dapat mencari item berdasarkan nama, jumlah stok, atau unit secara real time menggunakan fitur pencarian di halaman utama.
 
-🚀 Cara Menggunakan
-Login menggunakan email dan password yang valid.
+- **User Interface yang Ramah**  
+  Dengan tampilan yang bersih dan responsif, aplikasi ini memudahkan pengguna dalam navigasi. Terdapat tampilan dialog untuk menambah dan mengedit item serta fitur drag & drop untuk Floating Action Button (FAB).
 
-Lihat data item yang tersedia di halaman utama.
+## Teknologi yang Digunakan
 
-Tambah item baru dengan menekan tombol tambah (FAB).
+- **Kotlin**  
+  Bahasa pemrograman utama untuk pengembangan aplikasi Android.
 
-Edit atau hapus item langsung dari daftar yang tersedia.
+- **MVVM Architecture**  
+  Memisahkan logika bisnis dari tampilan, sehingga kode menjadi lebih terstruktur dan mudah dikelola.
 
-Gunakan fitur pencarian untuk menemukan item dengan cepat.
+- **Retrofit**  
+  Digunakan untuk berkomunikasi dengan API server.
 
-Logout untuk keluar dari akun dengan aman.
+- **Room Database**  
+  Menyimpan data secara lokal dengan efisien, mendukung operasi CRUD.
 
-📞 Kontak
-Untuk informasi lebih lanjut, silakan hubungi saya di Instagram: @muhmmadsf
+- **LiveData & ViewModel**  
+  Memastikan UI selalu sinkron dengan data terbaru secara reaktif.
+
+- **Kotlin Coroutines**  
+  Mengelola operasi asinkron dengan cara yang lebih sederhana dan efisien.
+
+## Cara Menggunakan Aplikasi
+
+1. **Login**  
+   Buka aplikasi dan masukkan email serta password yang valid. Setelah login berhasil, token disimpan untuk autentikasi selanjutnya.
+
+2. **Lihat Data Item**  
+   Halaman utama akan menampilkan daftar item yang tersimpan di database lokal. Data ini dapat di-refresh secara manual melalui tombol refresh atau swipe refresh untuk mendapatkan data terbaru dari API.
+
+3. **Tambah Item**  
+   Tekan Floating Action Button (FAB) untuk membuka form dialog. Isi nama, jumlah stok, dan unit barang, kemudian tekan tombol simpan untuk menambahkan item ke database.
+
+4. **Edit atau Hapus Item**  
+   Setiap item yang ditampilkan memiliki tombol edit dan hapus. Tekan tombol edit untuk membuka form dengan data item yang sudah ada. Tekan tombol hapus untuk menghapus item dari database.
+
+5. **Cari Item**  
+   Gunakan kolom pencarian di bagian atas halaman utama untuk mencari item berdasarkan nama, jumlah stok, atau unit.
+
+6. **Logout**  
+   Tekan tombol logout untuk menghapus token dan kembali ke halaman login dengan aman.
+
+## Kontak
+
+Untuk informasi lebih lanjut atau diskusi, silakan hubungi saya di Instagram: [@muhmmadsf](https://www.instagram.com/muhmmadsf)
