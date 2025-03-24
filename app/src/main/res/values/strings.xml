@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Aplikasi_Manajemen_Stok</string>
+
+    <!-- Placeholder pencarian -->
+    <string name="search_hint">Search...</string>
+
+    <string name="item_name_label">Nama Barang</string>
+    <string name="item_stock_label">Stok: 0 Pcs</string>
+
+    <!-- contoh string lain -->
+    <string name="edit_item">Edit item</string>
+    <string name="delete_item">Hapus item</string>
+    <string name="refresh">Refresh</string>
+    <string name="add_item">Tambah Barang</string>
+    <string name="logout">Keluar Akun</string>
+
+</resources>
